@@ -1,0 +1,12 @@
+{
+	"private": true,
+	"scripts": {
+		"dev": "npx esbuild src/app.js src/app.css --bundle --outdir=docs",
+		"build": "yarn run dev --minify",
+		"watch": "yarn run dev --watch"
+	},
+	"devDependencies": {
+		"esbuild": "^0.25.0",
+		"peerjs": "^1.5.4"
+	}
+}

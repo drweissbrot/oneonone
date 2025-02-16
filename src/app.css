@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	background: #212121;
+	color: #aeaeae;
+	color-scheme: dark;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	min-height: 100vh;
+	box-sizing: border-box;
+
+	padding: 2rem;
+	font: 1rem/1.5 system-ui, Roboto, Ubuntu, sans-serif;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+h1 small {
+	display: block;
+	font-weight: 400;
+}
+
+#loading {
+	padding: 4rem;
+}
+
+main {
+	flex: 1;
+}
+
+
+section:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+}
+
+label {
+	display: block;
+}
+
+label:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+input,
+select {
+	margin-top: 0.25rem;
+	font: inherit;
+}
+
+select {
+	display: block;
+	width: 100%;
+	padding: 0.25rem 0.75rem;
+}
+
+.peer-id-wrapper:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+#local-peer-id,
+#remote-peer-id,
+#connection-link {
+	display: block;
+	font-family: Ubuntu Mono, Consolas, Monaco, monospace;
+}
+
+#connection-link {
+	width: 100%;
+	cursor: copy;
+}
+
+input[type='range'] {
+	display: block;
+	width: 100%;
+}
+
+input[type='checkbox'] {
+	margin-right: 0.5rem;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1.5rem;
+}
+
+footer a {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+
+	color: inherit;
+	font-size: 0.75rem;
+	text-decoration: none;
+	transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+footer a:not(:active):not(:hover) {
+	filter: grayscale(1);
+	opacity: 0.75;
+}
+
+footer a img {
+	display: block;
+	height: 1.5rem;
+	margin-right: 0.75rem;
+}

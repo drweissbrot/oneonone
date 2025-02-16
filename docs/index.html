@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>oneonone</title>
+	<link rel="stylesheet" href="/app.css">
+	<script src="/app.js" async defer></script>
+</head>
+<body>
+	<h1>
+		<span>oneonone</span>
+		<small>Dual-Client Peer-to-Peer Audio</small>
+	</h1>
+
+	<p id="loading">Loading...</p>
+	<noscript>This app requires JavaScript.</noscript>
+
+	<main style="display:none">
+		<section>
+			<h2>Devices</h2>
+
+			<label>
+				Input Device
+				<select id="input-device-select"></select>
+			</label>
+
+			<label>
+				Output Device
+				<select id="output-device-select"></select>
+			</label>
+		</section>
+
+		<section>
+			<h2>Connection</h2>
+
+			<div class="peer-id-wrapper">
+				You are:
+				<span id="local-peer-id">not connected</span>
+			</div>
+
+			<div class="peer-id-wrapper">
+				You're connected to:
+				<span id="remote-peer-id">no-one</span>
+			</div>
+
+			<div class="connection-link-wrapper">
+				To connect to someone, give them this link:
+				<span id="connection-link"></span>
+			</div>
+		</section>
+
+		<section>
+			<h2>Playback</h2>
+
+			<label for="loopback-volume-slider">
+				Your audio volume (loopback)
+				<audio id="loopback-audio" autoplay muted></audio>
+				<input type="range" id="loopback-volume-slider" min="0" max="1" step="0.01" value="0">
+			</label>
+
+			<label for="sending-muted-checkbox">
+				<input type="checkbox" id="sending-muted-checkbox">
+				Mute myself
+			</label>
+
+			<label for="receiving-volume-slider">
+				Their audio
+				<audio id="receiving-audio" autoplay></audio>
+				<input type="range" id="receiving-volume-slider" min="0" max="1" step="0.01" value="1">
+			</label>
+
+			<label for="receiving-muted-checkbox">
+				<input type="checkbox" id="receiving-muted-checkbox">
+				Mute them
+			</label>
+		</section>
+	</main>
+
+	<footer>
+		<a href="https://github.com/drweissbrot/oneonone">
+			GitHub
+		</a>
+
+		<a href="https://drweissbrot.net">
+			<picture>
+				<source srcset="https://img.brot.esq/dr-prot/0-0-64.avif" type="image/avif">
+				<source srcset="https://img.brot.esq/dr-prot/0-1.webp" type="image/webp">
+				<img src="https://img.brot.esq/dr-prot/0-r.png" alt="">
+			</picture>
+
+			drweissbrot
+		</a>
+</footer>
+</body>
+</html>
